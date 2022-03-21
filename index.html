@@ -9,21 +9,29 @@
   </head>
 
   <body>
+    
     <h1>Typing game!</h1>
-    <p>Practice your typing skills with a quote from Sherlock Holmes.</p>
-    <p>Click <span class="styled-button-start">START</span> to begin!</p>
-    <p id="quote"></p>
-    <!-- This will display our quote -->
+    <p type ="text" id="about">Practice your typing skills with a quote from Sherlock Holmes.</p>
+    <p type ="text" id="click-to">Click <b><span class="styled-start-text">START</span></b> to begin!</p>
+
+    <div class="car-drive">
+      <!-- This will display our quote -->
+      <p id="quote"></p>
+      <div class="progress">
+        <img src="/images/car.png" alt="car-image" id="car-image">
+        <img src="/images/finish.png" alt="finish-line" class="finish-line">
+      </div>
+    </div>
+  
     <p id="message"></p>
     <!-- This will display any status messages -->
-    <div class="input-text">
-      <input type="text" aria-label="current word" id="typed-value" />
+    
+    <div id="input">
       <!-- The textbox for typing -->
-      
-      <!-- To start the game -->
+      <input type="text" aria-label="current word" id="typed-value" />    
     </div>
-    <div class="button-start"> 
-      <button type="button" id="start">Start</span></button>
+    <div> 
+      <button type="button" id="start" class="button-start">Start</button>
     </div>
     
     <script src="script.js"></script>
