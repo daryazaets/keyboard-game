@@ -31,13 +31,13 @@ inputElement.classList.add("hidden")
 startButtonElement.addEventListener('click', () => {
   startButtonElement.classList.add("hidden")
   aboutGameElement.classList.add("hidden")
-  clickToGameElement.classList.add('hidden')    
+  clickToGameElement.classList.add('hidden')
   quoteElement.classList.remove("hidden")
   typedValueElement.classList.remove("hidden")
   inputElement.classList.remove("hidden")
-  
 
-  carElement.style.left='0';
+
+  carElement.style.left = '0';
 
   // get a quote
   const quoteIndex = Math.floor(Math.random() * quotes.length);
@@ -88,7 +88,7 @@ typedValueElement.addEventListener('input', () => {
     const newButtonText = 'Try again';
     startButtonElement.classList.remove("hidden")
     startButtonElement.innerText = newButtonText;
-    
+
     const elapsedTime = new Date().getTime() - startTime;
     const message = `You did it in ${elapsedTime / 1000} seconds.`;
     alert(message)
@@ -105,7 +105,7 @@ typedValueElement.addEventListener('input', () => {
     // highlight the new word
     quoteElement.childNodes[wordIndex].className = 'highlight';
 
-    const progress = wordIndex* 100 / words.length;
+    const progress = wordIndex * 100 / words.length;
     carElement.style.left = `${progress}%`;
   } else if (currentWord.startsWith(typedValue)) {
     // currently correct
